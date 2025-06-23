@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="achievement-popup" class="achievement-popup hidden">
+    <div class="achievement-content">
+      <div class="achievement-icon">🏆</div>
+      <div class="achievement-text">
+        <h3 id="achievement-title">Achievement Unlocked!</h3>
+        <p id="achievement-description">You're on fire!</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="level-up-popup" class="level-up-popup hidden">
+    <div class="level-up-content">
+      <div class="level-up-explosion">✨</div>
+      <h2>LEVEL UP!</h2>
+      <div class="new-level">Level <span id="new-level-number">2</span></div>
+      <p id="level-reward">New theme unlocked!</p>
+    </div>
+  </div>
+
+  <div class="background-animation">
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+    <div class="floating-shape shape4"></div>
+    <div class="floating-shape shape5"></div>
+  </div>
+  
+  <div class="container">
+    <div class="header">
+      <h1>✨ Daily Inspiration Pro ✨</h1>
+      <p>Transform your mindset with AI-powered wisdom</p>
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button id="level-display" class="level-badge">
+          <span>⚡ LVL <span id="current-level">1</span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="experience-bar">
+      <div class="xp-label">
+        <span>XP: <span id="current-xp">0</span>/<span id="next-level-xp">100</span></span>
+        <span class="level-indicator">Level <span id="level-display-text">1</span></span>
+      </div>
+      <div class="xp-bar">
+        <div class="xp-fill" id="xp-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-number" id="quote-count">0</span>
+        <span class="stat-label">Wisdom Gained</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" id="streak-count">1</span>
+        <span class="stat-label">🔥 Streak</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" id="achievement-count">0</span>
+        <span class="stat-label">🏆 Achievements</span>
+      </div>
+    </div>
+    
+    <div class="quote-display">
+      <div class="quote-symbol">"</div>
+      <div class="quote-content">
+        <p id="quote-text">Click the button to unlock your daily dose of wisdom!</p>
+        <div class="author-section" id="author-section" style="opacity: 0;">
+          <div class="divider"></div>
+          <cite id="quote-author"></cite>
+        </div>
+      </div>
+      <div class="quote-actions">
+        <button id="favorite-btn" class="action-btn" title="Add to Favorites">
+          <span>❤️</span>
+        </button>
+        <button id="share-btn" class="action-btn" title="Share Quote">
+          <span>📤</span>
+        </button>
+        <button id="copy-btn" class="action-btn" title="Copy Quote">
+          <span>📋</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="button-group">
+      <button id="new-quote-btn" class="inspire-btn">
+        <span>✨ Inspire Me</span>
+      </button>
+      <button id="random-mode-btn" class="mode-btn">
+        <span>🎲 Surprise Me</span>
+      </button>
+      <button id="challenge-btn" class="challenge-btn">
+        <span>⚔️ Daily Challenge</span>
+      </button>
+    </div>
+
+    <div class="daily-challenge">
+      <h3 id="challenge-title">🎯 Daily Quest: Wisdom Seeker</h3>
+      <p id="challenge-description">Read 10 quotes to unlock a special achievement!</p>
+      <div class="challenge-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="challenge-progress" style="width: 0%"></div>
+        </div>
+        <span id="challenge-counter">0/10 completed</span>
+      </div>
+      <div class="challenge-rewards">
+        <span class="reward">🎁 +50 XP</span>
+        <span class="reward">🏆 Achievement</span>
+        <span class="reward">🎨 New Theme</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
